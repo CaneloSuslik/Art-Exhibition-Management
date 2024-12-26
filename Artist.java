@@ -1,5 +1,5 @@
 // Artist.java
-class Artist { // Removed "public"
+class Artist { 
     private String name;
     private String style;
 
@@ -33,7 +33,7 @@ class Artist { // Removed "public"
     }
 }
 
-public class Main { // Add a main class for testing
+public class Main { 
     public static void main(String[] args) {
         Artist artist = new Artist("Pablo Picasso", "Cubism");
         System.out.println(artist);
