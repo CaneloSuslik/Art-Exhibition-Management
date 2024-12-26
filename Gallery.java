@@ -8,7 +8,7 @@ public class Gallery {
         this.location = location;
     }
 
-    // Getters and Setters
+  
     public String getName() {
         return name;
     }
