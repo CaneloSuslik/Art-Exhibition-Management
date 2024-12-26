@@ -10,7 +10,7 @@ public class Artwork {
         this.price = price;
     }
 
-    // Getters and Setters
+    
     public String getTitle() {
         return title;
     }
