@@ -1,5 +1,5 @@
 // Artist.java
-public class Artist {
+class Artist { // Removed "public"
     private String name;
     private String style;
 
@@ -8,7 +8,6 @@ public class Artist {
         this.style = style;
     }
 
-    // Getters and Setters
     public String getName() {
         return name;
     }
@@ -33,3 +32,11 @@ public class Artist {
                 '}';
     }
 }
+
+public class Main { // Add a main class for testing
+    public static void main(String[] args) {
+        Artist artist = new Artist("Pablo Picasso", "Cubism");
+        System.out.println(artist);
+    }
+}
+
