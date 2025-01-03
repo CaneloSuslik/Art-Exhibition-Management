@@ -32,4 +32,21 @@ public class Gallery {
                 ", location='" + location + '\'' +
                 '}';
     }
+    public List<Artwork> filterArtworksByArtist(String artist) {
+    return artworks.stream()
+                   .filter(artwork -> artwork.getArtist().equalsIgnoreCase(artist))
+                   .collect(Collectors.toList());
+}
+
+public Artwork findArtworkByTitle(String title) {
+    return artworks.stream()
+                   .filter(artwork -> artwork.getTitle().equalsIgnoreCase(title))
+                   .findFirst()
+                   .orElse(null);
+}
+
+public void sortArtworksByDate() {
+    artworks.sort(Comparator.comparing(Artwork::getCreationDate));
+}
+
 }
