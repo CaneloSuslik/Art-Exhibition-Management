@@ -35,13 +35,28 @@ public class Artwork {
         this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "Artwork{" +
-                "title='" + title + '\'' +
-                ", type='" + type + '\'' +
-                ", price=" + price +
-                '}';
+@Override
+public String toString() {
+    return "Artwork{" +
+           "title='" + title + '\'' +
+           ", artist='" + artist + '\'' +
+           '}';
+}
+
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Artwork artwork = (Artwork) o;
+    return Objects.equals(title, artwork.title) &&
+           Objects.equals(artist, artwork.artist);
+}
+
+@Override
+public int hashCode() {
+    return Objects.hash(title, artist);
+}
+
     }
     
 
