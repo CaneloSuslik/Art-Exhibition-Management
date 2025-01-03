@@ -43,4 +43,15 @@ public class Artwork {
                 ", price=" + price +
                 '}';
     }
+    
+
+public class Painting extends Artwork {
+    public Painting(String title, String artist) {
+        super(title, artist);
+    }
+
+    @Override
+    public String getType() {
+        return "Painting";
+    }
 }
