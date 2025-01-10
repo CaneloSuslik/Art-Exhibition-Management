@@ -1,52 +1,29 @@
-// Gallery.java
+import java.util.ArrayList;
+import java.util.List;
+
 public class Gallery {
     private String name;
     private String location;
+    private List<Artwork> artworks;
 
     public Gallery(String name, String location) {
         this.name = name;
         this.location = location;
+        this.artworks = new ArrayList<>();
     }
 
-  
-    public String getName() {
-        return name;
+    public void addArtwork(Artwork artwork) {
+        artworks.add(artwork);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
+    public List<Artwork> getArtworks() {
+        return new ArrayList<>(artworks);
     }
 
     @Override
     public String toString() {
-        return "Gallery{" +
-                "name='" + name + '\'' +
-                ", location='" + location + '\'' +
-                '}';
+        return "Gallery{name='" + name + "', location='" + location + "'}";
     }
-    public List<Artwork> filterArtworksByArtist(String artist) {
-    return artworks.stream()
-                   .filter(artwork -> artwork.getArtist().equalsIgnoreCase(artist))
-                   .collect(Collectors.toList());
-}
-
-public Artwork findArtworkByTitle(String title) {
-    return artworks.stream()
-                   .filter(artwork -> artwork.getTitle().equalsIgnoreCase(title))
-                   .findFirst()
-                   .orElse(null);
-}
-
-public void sortArtworksByDate() {
-    artworks.sort(Comparator.comparing(Artwork::getCreationDate));
 }
 
 }
