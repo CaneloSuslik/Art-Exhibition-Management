@@ -1,11 +1,17 @@
-public class Artwork extends Exhibit {
+public class Artwork extends Entity {
+    private String title;
     private String medium;
     private double price;
 
-    public Artwork(String title, String medium, double price) {
-        super(title); // Вызов конструктора Exhibit
+    public Artwork(int id, String title, String medium, double price) {
+        super(id);
+        this.title = title;
         this.medium = medium;
         this.price = price;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String getMedium() {
@@ -18,6 +24,6 @@ public class Artwork extends Exhibit {
 
     @Override
     public String toString() {
-        return "Artwork{title='" + getTitle() + "', medium='" + medium + "', price=" + price + "}";
+        return "Artwork{id=" + getId() + ", title='" + title + "', medium='" + medium + "', price=" + price + "}";
     }
 }
