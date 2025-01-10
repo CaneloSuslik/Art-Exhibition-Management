@@ -1,17 +1,31 @@
-public class Artist extends Person {
+public class Artist extends Entity {
+    private String name;
     private String style;
 
-    public Artist(String name, String style) {
-        super(name);
+    public Artist(int id, String name, String style) {
+        super(id);
+        this.name = name;
         this.style = style;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getStyle() {
         return style;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
+    }
+
     @Override
     public String toString() {
-        return "Artist{name='" + name + "', style='" + style + "'}";
+        return "Artist{id=" + getId() + ", name='" + name + "', style='" + style + "'}";
     }
 }
