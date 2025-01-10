@@ -1,18 +1,21 @@
-// Main.java
 public class Main {
     public static void main(String[] args) {
-        // Create instances of classes
+        // Создаем художника
         Artist artist1 = new Artist("Vincent van Gogh", "Post-Impressionism");
+
+
         Artwork artwork1 = new Artwork("Starry Night", "Oil Painting", 1000000.0);
-        Gallery gallery1 = new Gallery("MoMA", "New York");
+        Artwork artwork2 = new Artwork("Sunflowers", "Oil Painting", 800000.0);
 
-        // Print objects to console
+
+        Gallery gallery = new Gallery("MoMA", "New York");
+        gallery.addArtwork(artwork1);
+        gallery.addArtwork(artwork2);
+
+
         System.out.println(artist1);
-        System.out.println(artwork1);
-        System.out.println(gallery1);
-
-        // Compare objects
-        Artwork artwork2 = new Artwork("Starry Night", "Oil Painting", 1000000.0);
-        System.out.println("Are artworks equal? " + artwork1.equals(artwork2));
+        System.out.println(gallery);
+        gallery.getArtworks().forEach(System.out::println);
     }
 }
+
