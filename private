@@ -1,9 +1,0 @@
-private List<Artwork> artworks = new ArrayList<>();
-
-public List<Artwork> getArtworks() {
-    return new ArrayList<>(artworks); // Return a copy to protect the original list
-}
-
-public void addArtwork(Artwork artwork) {
-    artworks.add(artwork);
-}
