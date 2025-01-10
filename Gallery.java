@@ -25,5 +25,3 @@ public class Gallery {
         return "Gallery{name='" + name + "', location='" + location + "'}";
     }
 }
-
-}
